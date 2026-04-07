@@ -1,17 +1,15 @@
 aid: goodyear-tire-and-rubber
-url: 
-  https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml
 apis:
   - aid: goodyear-tire-and-rubber:sightline-api
     name: Goodyear SightLine API
     tags:
-      - Tires
-      - IoT
       - Connected Vehicles
-      - Tire Data
+      - IoT
       - Telematics
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Tire Data
+      - Tires
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.goodyearsightline.com
     humanURL: https://developer.goodyearsightline.com/
     properties:
@@ -25,11 +23,10 @@ apis:
   - aid: goodyear-tire-and-rubber:gaas-portal
     name: Goodyear API Management Portal
     tags:
-      - Tires
-      - Fleet Management
       - API Management
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Fleet Management
+      - Tires
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://gaas-portal.goodyear.com
     humanURL: https://gaas-portal.goodyear.com/
     properties:
@@ -43,11 +40,10 @@ apis:
   - aid: goodyear-tire-and-rubber:catalog-api
     name: Goodyear Truck Tire Catalog API
     tags:
-      - Tires
       - Catalog
+      - Tires
       - Truck Tires
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.catalog.goodyeartrucktires.com
     humanURL: https://api.catalog.goodyeartrucktires.com/
     properties:
@@ -59,11 +55,10 @@ apis:
   - aid: goodyear-tire-and-rubber:work-order-api
     name: Goodyear Work Order API
     tags:
+      - Fleet Management
       - Tires
       - Work Orders
-      - Fleet Management
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.workorder.goodyeartrucktires.com
     humanURL: https://api.workorder.goodyeartrucktires.com/
     properties:
@@ -75,11 +70,10 @@ apis:
   - aid: goodyear-tire-and-rubber:service-ticket-api
     name: Goodyear Service Ticket API
     tags:
-      - Tires
-      - Service Tickets
       - Fleet Management
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Service Tickets
+      - Tires
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.serviceticket.goodyeartrucktires.com
     humanURL: https://api.serviceticket.goodyeartrucktires.com/
     properties:
