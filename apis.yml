@@ -15,6 +15,8 @@ apis:
     properties:
       - type: Portal
         url: https://developer.goodyearsightline.com/
+      - type: OpenAPI
+        url: openapi/sightline-api.yml
     description: >-
       Goodyear SightLine API provides developer-friendly access to intelligent
       tire data including tire type, tread depth, tire pressure, load, wear
@@ -34,6 +36,8 @@ apis:
         url: https://gaas-portal.goodyear.com/
       - type: SignUp
         url: https://gaas-portal.goodyear.com/signup
+      - type: OpenAPI
+        url: openapi/gaas-portal.yml
     description: >-
       The Goodyear API Management Portal (GaaS) provides access to Goodyear's
       suite of APIs for tire and fleet management services.
@@ -82,5 +86,34 @@ apis:
     description: >-
       The Goodyear Service Ticket API provides management of service tickets
       for commercial truck tire services.
+name: Goodyear Tire & Rubber
+type: Index
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+created: '2026-03-21'
+modified: '2026-04-28'
+specificationVersion: '0.19'
+tags:
+  - Connected Vehicles
+  - Fleet Management
+  - IoT
+  - Telematics
+  - Tires
+common:
+  - url: https://www.goodyear.com
+    name: Goodyear Website
+    type: Website
+  - url: https://developer.goodyearsightline.com/
+    name: SightLine Developer Portal
+    type: Portal
+  - url: https://gaas-portal.goodyear.com/
+    name: Goodyear API Management Portal
+    type: Portal
 description: >-
-  Description will go into a meta tag in.
+  The Goodyear Tire & Rubber Company is a global tire manufacturer that
+  provides developer APIs for intelligent tire data, fleet management, and
+  commercial truck tire services. Goodyear's SightLine technology and GaaS
+  API platform enable programmatic access to tire telematics, catalogs,
+  work orders, and service tickets.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
