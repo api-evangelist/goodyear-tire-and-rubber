@@ -1,0 +1,166 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Goodyear Tire & Rubber
+providerId: goodyear-tire-and-rubber
+publisherName: Goodyear Tire & Rubber
+serviceCategory: API
+created: '2026-05-04'
+modified: '2026-05-04'
+tags:
+  - Connected Vehicles
+  - Fleet Management
+  - IoT
+  - Telematics
+  - Tires
+  - FinOps
+  - Cost Management
+  - FOCUS
+description: FinOps framework definition for the Goodyear Tire & Rubber API surface. Provides a FOCUS-aligned
+  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+principles:
+  - name: Visibility
+    description: Make API consumption costs visible to engineering, product, and finance teams in near
+      real-time.
+  - name: Allocation
+    description: Tag every chargeable API call with the consuming team, environment, application, and
+      feature so cost can be allocated.
+  - name: Optimization
+    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
+      cost per useful unit of work.
+  - name: Accountability
+    description: Establish budget owners and chargeback or showback flows for each consuming team.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - FinOps Education and Enablement
+      - Invoicing and Chargeback
+      - Onboarding Workloads
+      - Intersecting Disciplines
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+    - Adjustment
+  chargeFrequency: Recurring
+focusColumns:
+  ServiceName: Goodyear Tire & Rubber
+  ServiceCategory: Developer Tools / API
+  ProviderName: Goodyear Tire & Rubber
+  PublisherName: Goodyear Tire & Rubber
+  InvoiceIssuerName: Goodyear Tire & Rubber
+  PricingCategory: Usage-Based
+  PricingUnit: request
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: api_requests
+    description: Count of billable API requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+      - region
+      - consumer
+  - name: data_egress
+    description: Bytes returned over the network in API responses
+    unit: GB
+    aggregation: sum
+    dimensions:
+      - api
+      - region
+      - consumer
+  - name: compute_seconds
+    description: Server-side compute consumed by the request, where applicable
+    unit: second
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+apis:
+  - name: Goodyear SightLine API
+    baseURL: https://developer.goodyearsightline.com
+    tags:
+      - Connected Vehicles
+      - IoT
+      - Telematics
+      - Tire Data
+      - Tires
+    serviceName: Goodyear SightLine API
+    serviceCategory: API
+  - name: Goodyear API Management Portal
+    baseURL: https://gaas-portal.goodyear.com
+    tags:
+      - API Management
+      - Fleet Management
+      - Tires
+    serviceName: Goodyear API Management Portal
+    serviceCategory: API
+  - name: Goodyear Truck Tire Catalog API
+    baseURL: https://api.catalog.goodyeartrucktires.com
+    tags:
+      - Catalog
+      - Tires
+      - Truck Tires
+    serviceName: Goodyear Truck Tire Catalog API
+    serviceCategory: API
+  - name: Goodyear Work Order API
+    baseURL: https://api.workorder.goodyeartrucktires.com
+    tags:
+      - Fleet Management
+      - Tires
+      - Work Orders
+    serviceName: Goodyear Work Order API
+    serviceCategory: API
+  - name: Goodyear Service Ticket API
+    baseURL: https://api.serviceticket.goodyeartrucktires.com
+    tags:
+      - Fleet Management
+      - Service Tickets
+      - Tires
+    serviceName: Goodyear Service Ticket API
+    serviceCategory: API
+unitEconomics:
+  - name: Cost per 1K Requests
+    metric: billed_cost / (api_requests / 1000)
+    target: TBD
+  - name: Cost per Active Consumer
+    metric: billed_cost / active_consumers
+    target: TBD
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
