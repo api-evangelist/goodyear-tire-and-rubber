@@ -1,0 +1,181 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Goodyear API Management Portal (GaaS)
+  description: The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management
+    services including catalog, work order, and service ticket management.
+  tags:
+  - Goodyear
+  - Tire
+  - And
+  - Rubber
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: goodyear-tire-and-rubber
+    baseUri: https://gaas-portal.goodyear.com
+    description: Goodyear API Management Portal (GaaS) HTTP API.
+    resources:
+    - name: catalog
+      path: /catalog
+      operations:
+      - name: gettirecatalog
+        method: GET
+        description: Get Tire Catalog
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: work-orders
+      path: /work-orders
+      operations:
+      - name: getworkorders
+        method: GET
+        description: Get Work Orders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createworkorder
+        method: POST
+        description: Create Work Order
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: service-tickets
+      path: /service-tickets
+      operations:
+      - name: getservicetickets
+        method: GET
+        description: Get Service Tickets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createserviceticket
+        method: POST
+        description: Create Service Ticket
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: goodyear-tire-and-rubber-rest
+    description: REST adapter for Goodyear API Management Portal (GaaS).
+    resources:
+    - path: /catalog
+      name: gettirecatalog
+      operations:
+      - method: GET
+        name: gettirecatalog
+        description: Get Tire Catalog
+        call: goodyear-tire-and-rubber.gettirecatalog
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /work-orders
+      name: getworkorders
+      operations:
+      - method: GET
+        name: getworkorders
+        description: Get Work Orders
+        call: goodyear-tire-and-rubber.getworkorders
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /work-orders
+      name: createworkorder
+      operations:
+      - method: POST
+        name: createworkorder
+        description: Create Work Order
+        call: goodyear-tire-and-rubber.createworkorder
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /service-tickets
+      name: getservicetickets
+      operations:
+      - method: GET
+        name: getservicetickets
+        description: Get Service Tickets
+        call: goodyear-tire-and-rubber.getservicetickets
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /service-tickets
+      name: createserviceticket
+      operations:
+      - method: POST
+        name: createserviceticket
+        description: Create Service Ticket
+        call: goodyear-tire-and-rubber.createserviceticket
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: goodyear-tire-and-rubber-mcp
+    transport: http
+    description: MCP adapter for Goodyear API Management Portal (GaaS) for AI agent use.
+    tools:
+    - name: gettirecatalog
+      description: Get Tire Catalog
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: goodyear-tire-and-rubber.gettirecatalog
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getworkorders
+      description: Get Work Orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: goodyear-tire-and-rubber.getworkorders
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createworkorder
+      description: Create Work Order
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: goodyear-tire-and-rubber.createworkorder
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getservicetickets
+      description: Get Service Tickets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: goodyear-tire-and-rubber.getservicetickets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createserviceticket
+      description: Create Service Ticket
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: goodyear-tire-and-rubber.createserviceticket
+      outputParameters:
+      - type: object
+        mapping: $.
