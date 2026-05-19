@@ -1,0 +1,126 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Goodyear SightLine API
+  description: 'Goodyear SightLine API. 2 operations. Lead operation: Get Friction Data. Self-contained Naftiko capability
+    covering one Goodyear Tire And Rubber business surface.'
+  tags:
+  - Goodyear Tire And Rubber
+  - Goodyear SightLine API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOODYEAR_TIRE_AND_RUBBER_API_KEY: GOODYEAR_TIRE_AND_RUBBER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: sightline
+    baseUri: https://developer.goodyearsightline.com
+    description: Goodyear SightLine API business capability. Self-contained, no shared references.
+    resources:
+    - name: friction
+      path: /friction
+      operations:
+      - name: getfrictiondata
+        method: GET
+        description: Get Friction Data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: vehicleId
+          in: query
+          type: string
+        - name: latitude
+          in: query
+          type: number
+        - name: longitude
+          in: query
+          type: number
+    - name: tires
+      path: /tires
+      operations:
+      - name: gettiredata
+        method: GET
+        description: Get Tire Data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: vehicleId
+          in: query
+          type: string
+          description: The vehicle identifier to retrieve tire data for.
+  exposes:
+  - type: rest
+    namespace: sightline-rest
+    port: 8080
+    description: REST adapter for Goodyear SightLine API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/friction
+      name: friction
+      description: REST surface for friction.
+      operations:
+      - method: GET
+        name: getfrictiondata
+        description: Get Friction Data
+        call: sightline.getfrictiondata
+        with:
+          vehicleId: rest.vehicleId
+          latitude: rest.latitude
+          longitude: rest.longitude
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tires
+      name: tires
+      description: REST surface for tires.
+      operations:
+      - method: GET
+        name: gettiredata
+        description: Get Tire Data
+        call: sightline.gettiredata
+        with:
+          vehicleId: rest.vehicleId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: sightline-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Goodyear SightLine API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: get-friction-data
+      description: Get Friction Data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: sightline.getfrictiondata
+      with:
+        vehicleId: tools.vehicleId
+        latitude: tools.latitude
+        longitude: tools.longitude
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-tire-data
+      description: Get Tire Data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: sightline.gettiredata
+      with:
+        vehicleId: tools.vehicleId
+      outputParameters:
+      - type: object
+        mapping: $.
