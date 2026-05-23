@@ -1,0 +1,25 @@
+{
+  "provider": "Goodyear Tire & Rubber",
+  "providerId": "goodyear-tire-and-rubber",
+  "kind": "json-structure",
+  "description": "Structural overview of the Goodyear Tire & Rubber API surface; extracted from openapi/.",
+  "schemaCount": 0,
+  "operationCount": 2,
+  "schemas": [],
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/tires",
+      "operationId": "getTireData",
+      "summary": "Get Tire Data",
+      "tags": []
+    },
+    {
+      "method": "GET",
+      "path": "/friction",
+      "operationId": "getFrictionData",
+      "summary": "Get Friction Data",
+      "tags": []
+    }
+  ]
+}
