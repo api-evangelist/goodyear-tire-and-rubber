@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodyear API Management Portal (GaaS)",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Tire Catalog",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gaas-portal.goodyear.com/catalog"
+      },
+      "docs": "Retrieve Goodyear commercial truck tire catalog data."
+    },
+    {
+      "info": {
+        "name": "Get Work Orders",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gaas-portal.goodyear.com/work-orders"
+      },
+      "docs": "Retrieve service work orders for commercial truck tire services."
+    },
+    {
+      "info": {
+        "name": "Create Work Order",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gaas-portal.goodyear.com/work-orders",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a new service work order for commercial truck tire services."
+    },
+    {
+      "info": {
+        "name": "Get Service Tickets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://gaas-portal.goodyear.com/service-tickets"
+      },
+      "docs": "Retrieve service tickets for commercial truck tire services."
+    },
+    {
+      "info": {
+        "name": "Create Service Ticket",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://gaas-portal.goodyear.com/service-tickets",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a new service ticket for commercial truck tire services."
+    }
+  ],
+  "bundled": true
+}

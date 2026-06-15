@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodyear SightLine API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Tire Data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.goodyearsightline.com/tires",
+        "params": [
+          {
+            "name": "vehicleId",
+            "value": "",
+            "type": "query",
+            "description": "The vehicle identifier to retrieve tire data for."
+          }
+        ]
+      },
+      "docs": "Retrieve intelligent tire sensor data including pressure, temperature, and wear state."
+    },
+    {
+      "info": {
+        "name": "Get Friction Data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.goodyearsightline.com/friction",
+        "params": [
+          {
+            "name": "vehicleId",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "latitude",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "longitude",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Retrieve tire friction data combined with real-time weather conditions for road safety assessment."
+    }
+  ],
+  "bundled": true
+}

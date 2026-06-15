@@ -1,0 +1,278 @@
+{
+  "item": [
+    {
+      "id": "065cea6e-c43e-48f8-9de3-26626d0b45b5",
+      "name": "Get Tire Data",
+      "request": {
+        "name": "Get Tire Data",
+        "description": {
+          "content": "Retrieve intelligent tire sensor data including pressure, temperature, and wear state.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "tires"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "vehicleId",
+              "value": "<string>",
+              "description": "The vehicle identifier to retrieve tire data for."
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e80691fa-75e5-411a-a94a-b1e5cc4df9c4",
+          "name": "Successful response with tire data.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tires"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "vehicleId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"vehicleId\": \"string\",\n  \"tires\": [\n    {\n      \"position\": \"string\",\n      \"tireType\": \"string\",\n      \"treadDepthMm\": 929.5371832679023,\n      \"pressurePsi\": 7436.216588094392,\n      \"temperatureC\": 962.1059433487856,\n      \"loadKg\": 2349.2548591730765,\n      \"wearState\": \"worn\"\n    },\n    {\n      \"position\": \"string\",\n      \"tireType\": \"string\",\n      \"treadDepthMm\": 9375.588104681805,\n      \"pressurePsi\": 6499.662554168909,\n      \"temperatureC\": 2937.92413766523,\n      \"loadKg\": 6210.11576299375,\n      \"wearState\": \"critical\"\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "be8234b6-6de8-41b0-ba8e-89eb7a1a77a4",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tires"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "vehicleId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4d7975d3-bf5f-4713-8ec3-c0f02306eda9",
+      "name": "Get Friction Data",
+      "request": {
+        "name": "Get Friction Data",
+        "description": {
+          "content": "Retrieve tire friction data combined with real-time weather conditions for road safety assessment.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "friction"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "vehicleId",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "latitude",
+              "value": "<number>"
+            },
+            {
+              "disabled": false,
+              "key": "longitude",
+              "value": "<number>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a1b46569-3546-453c-8ccf-efc68a303bdc",
+          "name": "Successful response with friction data.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "friction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "vehicleId",
+                  "value": "<string>"
+                },
+                {
+                  "key": "latitude",
+                  "value": "<number>"
+                },
+                {
+                  "key": "longitude",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"frictionCoefficient\": 2927.8671426732717,\n  \"roadCondition\": \"string\",\n  \"weatherCondition\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "29e5b49c-3cc3-4872-ab0f-7465cef3c349",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "friction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "vehicleId",
+                  "value": "<string>"
+                },
+                {
+                  "key": "latitude",
+                  "value": "<number>"
+                },
+                {
+                  "key": "longitude",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.goodyearsightline.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d1968245-bd90-415c-b39c-9f22ecedc1c2",
+    "name": "Goodyear SightLine API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodyear SightLine API provides developer-friendly access to intelligent tire data including tire type, tread depth, tire pressure, load, wear state, and temperature. Uses REST architecture with robust security protocols for efficient and secure data sharing.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}

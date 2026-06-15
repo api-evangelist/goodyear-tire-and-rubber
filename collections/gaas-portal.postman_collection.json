@@ -1,0 +1,554 @@
+{
+  "item": [
+    {
+      "id": "7aee5168-85ce-430b-ae7d-2d782c88cdbe",
+      "name": "Get Tire Catalog",
+      "request": {
+        "name": "Get Tire Catalog",
+        "description": {
+          "content": "Retrieve Goodyear commercial truck tire catalog data.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "catalog"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "11791c97-3734-44f5-85b5-2caebf64a835",
+          "name": "Successful response with tire catalog.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "catalog"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"tires\": [\n    {\n      \"sku\": \"string\",\n      \"name\": \"string\",\n      \"size\": \"string\",\n      \"category\": \"string\"\n    },\n    {\n      \"sku\": \"string\",\n      \"name\": \"string\",\n      \"size\": \"string\",\n      \"category\": \"string\"\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "d280e751-cd15-4b6e-9686-306ec1ac76d4",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "catalog"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fa1cfc8c-9154-4227-a11e-c1742027480e",
+      "name": "Get Work Orders",
+      "request": {
+        "name": "Get Work Orders",
+        "description": {
+          "content": "Retrieve service work orders for commercial truck tire services.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "work-orders"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "82921c37-9ad4-415a-b3d3-5e757081dfac",
+          "name": "Successful response with work orders.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "work-orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "b6adaa6c-780f-45c8-ba81-7a08f2c6a24c",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "work-orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e474d676-68c6-41bb-8446-853c5aafd5cd",
+      "name": "Create Work Order",
+      "request": {
+        "name": "Create Work Order",
+        "description": {
+          "content": "Create a new service work order for commercial truck tire services.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "work-orders"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "46ef52a7-a63e-4dde-918d-6ec87d943123",
+          "name": "Work order created successfully.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "work-orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "4353ce3d-7134-406f-a401-d4bb6bde2e89",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "work-orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "71f40931-440d-4b13-aab7-638aa48c192f",
+      "name": "Get Service Tickets",
+      "request": {
+        "name": "Get Service Tickets",
+        "description": {
+          "content": "Retrieve service tickets for commercial truck tire services.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "service-tickets"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3a2222d0-e1e2-4cf8-b575-c9f85a77f861",
+          "name": "Successful response with service tickets.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "c54b5a20-28c3-463e-b080-2c6329b99425",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a94d8ba6-73ba-40cb-9b6c-5b7c9075b6fc",
+      "name": "Create Service Ticket",
+      "request": {
+        "name": "Create Service Ticket",
+        "description": {
+          "content": "Create a new service ticket for commercial truck tire services.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "service-tickets"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "847f322e-7ddb-4c69-9cc4-3e005cd830ce",
+          "name": "Service ticket created successfully.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "7bfe0387-f419-43f3-baaa-0c7660a4e6ef",
+          "name": "Unauthorized.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gaas-portal.goodyear.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0bc8e82b-c610-48e9-8377-f54bb1aa70a8",
+    "name": "Goodyear API Management Portal (GaaS)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}
