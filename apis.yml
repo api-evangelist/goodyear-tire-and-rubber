@@ -92,6 +92,8 @@ tags:
   - Telematics
   - Tires
 common:
+  - type: DomainSecurity
+    url: security/goodyear-tire-and-rubber-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/goodyear
   - type: LinkedIn
@@ -105,6 +107,8 @@ common:
   - url: https://gaas-portal.goodyear.com/
     name: Goodyear API Management Portal
     type: Portal
+  - url: https://news.goodyear.com/news?pagetemplate=rss
+    type: Blog
 description: >-
   The Goodyear Tire & Rubber Company is a global tire manufacturer that provides developer APIs for intelligent tire
   data, fleet management, and commercial truck tire services. Goodyear's SightLine technology and GaaS API platform
