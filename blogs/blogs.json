@@ -1,0 +1,14 @@
+{
+  "repo": "goodyear-tire-and-rubber",
+  "feeds": [
+    {
+      "source": "https://news.goodyear.com/news?pagetemplate=rss",
+      "feed_url": "https://news.goodyear.com/news?pagetemplate=rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 5
+}
