@@ -92,6 +92,8 @@ tags:
   - Telematics
   - Tires
 common:
+  - type: AgenticAccess
+    url: agentic-access/goodyear-tire-and-rubber-agentic-access.yml
   - type: DomainSecurity
     url: security/goodyear-tire-and-rubber-domain-security.yml
   - type: GitHubOrganization
