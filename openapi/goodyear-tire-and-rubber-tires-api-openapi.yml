@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  title: Goodyear API Management Portal (GaaS) Catalog Tires API
+  description: The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.
+  version: 1.0.0
+  contact:
+    name: Goodyear
+    url: https://gaas-portal.goodyear.com/
+servers:
+- url: https://gaas-portal.goodyear.com
+  description: Goodyear API Management Portal
+tags:
+- name: Tires
+paths:
+  /tires:
+    get:
+      operationId: getTireData
+      summary: Get Tire Data
+      description: Retrieve intelligent tire sensor data including pressure, temperature, and wear state.
+      parameters:
+      - name: vehicleId
+        in: query
+        description: The vehicle identifier to retrieve tire data for.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with tire data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vehicleId:
+                    type: string
+                  tires:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        position:
+                          type: string
+                          description: Tire position on the vehicle.
+                        tireType:
+                          type: string
+                        treadDepthMm:
+                          type: number
+                          description: Tread depth in millimeters.
+                        pressurePsi:
+                          type: number
+                          description: Tire pressure in PSI.
+                        temperatureC:
+                          type: number
+                          description: Tire temperature in Celsius.
+                        loadKg:
+                          type: number
+                          description: Tire load in kilograms.
+                        wearState:
+                          type: string
+                          enum:
+                          - new
+                          - good
+                          - fair
+                          - worn
+                          - critical
+        '401':
+          description: Unauthorized.
+      tags:
+      - Tires

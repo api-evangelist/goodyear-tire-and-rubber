@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: Goodyear API Management Portal (GaaS) Catalog API
+  description: The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.
+  version: 1.0.0
+  contact:
+    name: Goodyear
+    url: https://gaas-portal.goodyear.com/
+servers:
+- url: https://gaas-portal.goodyear.com
+  description: Goodyear API Management Portal
+tags:
+- name: Catalog
+paths:
+  /catalog:
+    get:
+      operationId: getTireCatalog
+      summary: Get Tire Catalog
+      description: Retrieve Goodyear commercial truck tire catalog data.
+      responses:
+        '200':
+          description: Successful response with tire catalog.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tires:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sku:
+                          type: string
+                        name:
+                          type: string
+                        size:
+                          type: string
+                        category:
+                          type: string
+        '401':
+          description: Unauthorized.
+      tags:
+      - Catalog
