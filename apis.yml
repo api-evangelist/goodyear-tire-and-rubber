@@ -1,87 +1,144 @@
 aid: goodyear-tire-and-rubber
 url: https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml
 apis:
-  - aid: goodyear-tire-and-rubber:sightline-api
-    name: Goodyear SightLine API
-    tags:
-      - Connected Vehicles
-      - IoT
-      - Telematics
-      - Tire Data
-      - Tires
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://developer.goodyearsightline.com
-    humanURL: https://developer.goodyearsightline.com/
-    properties:
-      - type: Portal
-        url: https://developer.goodyearsightline.com/
-      - type: OpenAPI
-        url: openapi/sightline-api.yml
-    description: >-
-      Goodyear SightLine API provides developer-friendly access to intelligent tire data including tire type, tread
-      depth, tire pressure, load, wear state, and temperature. The API uses REST architecture with robust security
-      protocols for efficient and secure data sharing.
-  - aid: goodyear-tire-and-rubber:gaas-portal
-    name: Goodyear API Management Portal
-    tags:
-      - API Management
-      - Fleet Management
-      - Tires
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://gaas-portal.goodyear.com
-    humanURL: https://gaas-portal.goodyear.com/
-    properties:
-      - type: Portal
-        url: https://gaas-portal.goodyear.com/
-      - type: Signup
-        url: https://gaas-portal.goodyear.com/signup
-      - type: OpenAPI
-        url: openapi/gaas-portal.yml
-    description: >-
-      The Goodyear API Management Portal (GaaS) provides access to Goodyear's suite of APIs for tire and fleet
-      management services.
-  - aid: goodyear-tire-and-rubber:catalog-api
-    name: Goodyear Truck Tire Catalog API
-    tags:
-      - Catalog
-      - Tires
-      - Truck Tires
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.catalog.goodyeartrucktires.com
-    humanURL: https://api.catalog.goodyeartrucktires.com/
-    properties:
-      - type: Portal
-        url: https://api.catalog.goodyeartrucktires.com/
-    description: The Goodyear Truck Tire Catalog API provides access to Goodyear's commercial truck tire catalog data.
-  - aid: goodyear-tire-and-rubber:work-order-api
-    name: Goodyear Work Order API
-    tags:
-      - Fleet Management
-      - Tires
-      - Work Orders
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.workorder.goodyeartrucktires.com
-    humanURL: https://api.workorder.goodyeartrucktires.com/
-    properties:
-      - type: Portal
-        url: https://api.workorder.goodyeartrucktires.com/
-    description: The Goodyear Work Order API enables management of service work orders for commercial truck tire services.
-  - aid: goodyear-tire-and-rubber:service-ticket-api
-    name: Goodyear Service Ticket API
-    tags:
-      - Fleet Management
-      - Service Tickets
-      - Tires
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.serviceticket.goodyeartrucktires.com
-    humanURL: https://api.serviceticket.goodyeartrucktires.com/
-    properties:
-      - type: Portal
-        url: https://api.serviceticket.goodyeartrucktires.com/
-    description: The Goodyear Service Ticket API provides management of service tickets for commercial truck tire services.
+- aid: goodyear-tire-and-rubber:catalog-api
+  name: Goodyear Truck Tire Catalog API
+  tags:
+  - Catalog
+  - Tires
+  - Truck Tires
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://api.catalog.goodyeartrucktires.com
+  humanURL: https://api.catalog.goodyeartrucktires.com/
+  properties:
+  - type: Portal
+    url: https://api.catalog.goodyeartrucktires.com/
+  description: >-
+    The Goodyear Truck Tire Catalog API provides access to Goodyear's commercial truck tire catalog data.
+- aid: goodyear-tire-and-rubber:work-order-api
+  name: Goodyear Work Order API
+  tags:
+  - Fleet Management
+  - Tires
+  - Work Orders
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://api.workorder.goodyeartrucktires.com
+  humanURL: https://api.workorder.goodyeartrucktires.com/
+  properties:
+  - type: Portal
+    url: https://api.workorder.goodyeartrucktires.com/
+  description: >-
+    The Goodyear Work Order API enables management of service work orders for commercial truck tire services.
+- aid: goodyear-tire-and-rubber:service-ticket-api
+  name: Goodyear Service Ticket API
+  tags:
+  - Fleet Management
+  - Service Tickets
+  - Tires
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://api.serviceticket.goodyeartrucktires.com
+  humanURL: https://api.serviceticket.goodyeartrucktires.com/
+  properties:
+  - type: Portal
+    url: https://api.serviceticket.goodyeartrucktires.com/
+  description: >-
+    The Goodyear Service Ticket API provides management of service tickets for commercial truck tire services.
+- aid: goodyear-tire-and-rubber:goodyear-tire-and-rubber-catalog-api
+  name: Goodyear Tire & Rubber Catalog API
+  description: The Catalog API from Goodyear Tire & Rubber — 1 operation(s) for catalog.
+  humanURL: https://developer.goodyearsightline.com/
+  baseURL: https://developer.goodyearsightline.com
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/goodyear-tire-and-rubber-catalog-api-openapi.yml
+  - type: Portal
+    url: https://developer.goodyearsightline.com/
+  - type: Portal
+    url: https://gaas-portal.goodyear.com/
+  - type: Signup
+    url: https://gaas-portal.goodyear.com/signup
+- aid: goodyear-tire-and-rubber:goodyear-tire-and-rubber-friction-api
+  name: Goodyear Tire & Rubber Friction API
+  description: The Friction API from Goodyear Tire & Rubber — 1 operation(s) for friction.
+  humanURL: https://developer.goodyearsightline.com/
+  baseURL: https://developer.goodyearsightline.com
+  tags:
+  - Friction
+  properties:
+  - type: OpenAPI
+    url: openapi/goodyear-tire-and-rubber-friction-api-openapi.yml
+  - type: Portal
+    url: https://developer.goodyearsightline.com/
+  - type: Portal
+    url: https://gaas-portal.goodyear.com/
+  - type: Signup
+    url: https://gaas-portal.goodyear.com/signup
+- aid: goodyear-tire-and-rubber:goodyear-tire-and-rubber-service-tickets-api
+  name: Goodyear Tire & Rubber Service Tickets API
+  description: >-
+    The Service Tickets API from Goodyear Tire & Rubber — 1 operation(s) for service tickets.
+  humanURL: https://developer.goodyearsightline.com/
+  baseURL: https://developer.goodyearsightline.com
+  tags:
+  - Service Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/goodyear-tire-and-rubber-service-tickets-api-openapi.yml
+  - type: Portal
+    url: https://developer.goodyearsightline.com/
+  - type: Portal
+    url: https://gaas-portal.goodyear.com/
+  - type: Signup
+    url: https://gaas-portal.goodyear.com/signup
+- aid: goodyear-tire-and-rubber:goodyear-tire-and-rubber-tires-api
+  name: Goodyear Tire & Rubber Tires API
+  description: The Tires API from Goodyear Tire & Rubber — 1 operation(s) for tires.
+  humanURL: https://developer.goodyearsightline.com/
+  baseURL: https://developer.goodyearsightline.com
+  tags:
+  - Tires
+  properties:
+  - type: OpenAPI
+    url: openapi/goodyear-tire-and-rubber-tires-api-openapi.yml
+  - type: Portal
+    url: https://developer.goodyearsightline.com/
+  - type: Portal
+    url: https://gaas-portal.goodyear.com/
+  - type: Signup
+    url: https://gaas-portal.goodyear.com/signup
+- aid: goodyear-tire-and-rubber:goodyear-tire-and-rubber-work-orders-api
+  name: Goodyear Tire & Rubber Work Orders API
+  description: The Work Orders API from Goodyear Tire & Rubber — 1 operation(s) for work orders.
+  humanURL: https://developer.goodyearsightline.com/
+  baseURL: https://developer.goodyearsightline.com
+  tags:
+  - Work Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/goodyear-tire-and-rubber-work-orders-api-openapi.yml
+  - type: Portal
+    url: https://developer.goodyearsightline.com/
+  - type: Portal
+    url: https://gaas-portal.goodyear.com/
+  - type: Signup
+    url: https://gaas-portal.goodyear.com/signup
 name: Goodyear Tire & Rubber
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goodyear-tire-and-rubber.png
 created: '2026-03-21'
 modified: '2026-05-19'
 specificationVersion: '0.19'
