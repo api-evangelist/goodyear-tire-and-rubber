@@ -1,0 +1,22 @@
+{
+  "provider": "goodyear-tire-and-rubber",
+  "sources": [
+    "goodyear-tire-and-rubber-catalog-api-openapi.yml",
+    "goodyear-tire-and-rubber-friction-api-openapi.yml",
+    "goodyear-tire-and-rubber-service-tickets-api-openapi.yml",
+    "goodyear-tire-and-rubber-tires-api-openapi.yml",
+    "goodyear-tire-and-rubber-work-orders-api-openapi.yml"
+  ],
+  "outputs": [
+    "goodyear-tire-and-rubber-catalog-api-openapi.yml",
+    "goodyear-tire-and-rubber-friction-api-openapi.yml",
+    "goodyear-tire-and-rubber-service-tickets-api-openapi.yml",
+    "goodyear-tire-and-rubber-tires-api-openapi.yml",
+    "goodyear-tire-and-rubber-work-orders-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

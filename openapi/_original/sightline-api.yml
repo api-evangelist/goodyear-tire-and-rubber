@@ -1,0 +1,105 @@
+openapi: 3.1.0
+info:
+  title: Goodyear SightLine API
+  description: >-
+    Goodyear SightLine API provides developer-friendly access to intelligent
+    tire data including tire type, tread depth, tire pressure, load, wear
+    state, and temperature. Uses REST architecture with robust security
+    protocols for efficient and secure data sharing.
+  version: 1.0.0
+  contact:
+    name: Goodyear
+    url: https://developer.goodyearsightline.com/
+servers:
+  - url: https://developer.goodyearsightline.com
+    description: Goodyear SightLine Developer Portal
+paths:
+  /tires:
+    get:
+      operationId: getTireData
+      summary: Get Tire Data
+      description: Retrieve intelligent tire sensor data including pressure, temperature, and wear state.
+      parameters:
+        - name: vehicleId
+          in: query
+          description: The vehicle identifier to retrieve tire data for.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with tire data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vehicleId:
+                    type: string
+                  tires:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        position:
+                          type: string
+                          description: Tire position on the vehicle.
+                        tireType:
+                          type: string
+                        treadDepthMm:
+                          type: number
+                          description: Tread depth in millimeters.
+                        pressurePsi:
+                          type: number
+                          description: Tire pressure in PSI.
+                        temperatureC:
+                          type: number
+                          description: Tire temperature in Celsius.
+                        loadKg:
+                          type: number
+                          description: Tire load in kilograms.
+                        wearState:
+                          type: string
+                          enum:
+                            - new
+                            - good
+                            - fair
+                            - worn
+                            - critical
+        '401':
+          description: Unauthorized.
+  /friction:
+    get:
+      operationId: getFrictionData
+      summary: Get Friction Data
+      description: >-
+        Retrieve tire friction data combined with real-time weather conditions
+        for road safety assessment.
+      parameters:
+        - name: vehicleId
+          in: query
+          schema:
+            type: string
+        - name: latitude
+          in: query
+          schema:
+            type: number
+        - name: longitude
+          in: query
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Successful response with friction data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  frictionCoefficient:
+                    type: number
+                  roadCondition:
+                    type: string
+                  weatherCondition:
+                    type: string
+        '401':
+          description: Unauthorized.

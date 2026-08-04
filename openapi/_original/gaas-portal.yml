@@ -1,0 +1,101 @@
+openapi: 3.1.0
+info:
+  title: Goodyear API Management Portal (GaaS)
+  description: >-
+    The Goodyear API Management Portal provides access to Goodyear's suite
+    of APIs for tire and fleet management services including catalog, work
+    order, and service ticket management.
+  version: 1.0.0
+  contact:
+    name: Goodyear
+    url: https://gaas-portal.goodyear.com/
+servers:
+  - url: https://gaas-portal.goodyear.com
+    description: Goodyear API Management Portal
+paths:
+  /catalog:
+    get:
+      operationId: getTireCatalog
+      summary: Get Tire Catalog
+      description: Retrieve Goodyear commercial truck tire catalog data.
+      responses:
+        '200':
+          description: Successful response with tire catalog.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tires:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sku:
+                          type: string
+                        name:
+                          type: string
+                        size:
+                          type: string
+                        category:
+                          type: string
+        '401':
+          description: Unauthorized.
+  /work-orders:
+    get:
+      operationId: getWorkOrders
+      summary: Get Work Orders
+      description: Retrieve service work orders for commercial truck tire services.
+      responses:
+        '200':
+          description: Successful response with work orders.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Unauthorized.
+    post:
+      operationId: createWorkOrder
+      summary: Create Work Order
+      description: Create a new service work order for commercial truck tire services.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Work order created successfully.
+        '401':
+          description: Unauthorized.
+  /service-tickets:
+    get:
+      operationId: getServiceTickets
+      summary: Get Service Tickets
+      description: Retrieve service tickets for commercial truck tire services.
+      responses:
+        '200':
+          description: Successful response with service tickets.
+          content:
+            application/json:
+              schema:
+                type: object
+        '401':
+          description: Unauthorized.
+    post:
+      operationId: createServiceTicket
+      summary: Create Service Ticket
+      description: Create a new service ticket for commercial truck tire services.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Service ticket created successfully.
+        '401':
+          description: Unauthorized.
