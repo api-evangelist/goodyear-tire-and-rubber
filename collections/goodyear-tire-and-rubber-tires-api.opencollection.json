@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodyear API Management Portal (GaaS) Catalog Tires API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tires",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Tire Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://gaas-portal.goodyear.com/tires",
+            "params": [
+              {
+                "name": "vehicleId",
+                "value": "",
+                "type": "query",
+                "description": "The vehicle identifier to retrieve tire data for."
+              }
+            ]
+          },
+          "docs": "Retrieve intelligent tire sensor data including pressure, temperature, and wear state."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

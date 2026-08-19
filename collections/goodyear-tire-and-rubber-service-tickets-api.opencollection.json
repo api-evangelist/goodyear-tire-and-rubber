@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodyear API Management Portal (GaaS) Catalog Service Tickets API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Service Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Service Tickets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://gaas-portal.goodyear.com/service-tickets"
+          },
+          "docs": "Retrieve service tickets for commercial truck tire services."
+        },
+        {
+          "info": {
+            "name": "Create Service Ticket",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://gaas-portal.goodyear.com/service-tickets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new service ticket for commercial truck tire services."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

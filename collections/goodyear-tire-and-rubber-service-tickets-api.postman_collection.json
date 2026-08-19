@@ -1,0 +1,249 @@
+{
+  "item": [
+    {
+      "id": "6a23f35b-d487-4160-b8be-a037253bc133",
+      "name": "Service Tickets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e9ec1734-61cb-4fd6-8485-5b9ddfe53a3e",
+          "name": "Get Service Tickets",
+          "request": {
+            "name": "Get Service Tickets",
+            "description": {
+              "content": "Retrieve service tickets for commercial truck tire services.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "28a8bea4-0620-4015-a697-2db9183843b9",
+              "name": "Successful response with service tickets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "service-tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "195d8e6d-f33d-43d8-9879-8afd80b41fc2",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "service-tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6fbc15c-32bd-4778-a284-eea48e00f356",
+          "name": "Create Service Ticket",
+          "request": {
+            "name": "Create Service Ticket",
+            "description": {
+              "content": "Create a new service ticket for commercial truck tire services.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "service-tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2bcd0db7-49a1-42ad-82d3-7c96a9b2978a",
+              "name": "Service ticket created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "service-tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a41e8e4b-c772-42d6-9a32-7f0c3e07b99b",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "service-tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gaas-portal.goodyear.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "26f04874-3cc4-426b-9780-9ee8336bf107",
+    "name": "Goodyear API Management Portal (GaaS) Catalog Service Tickets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}

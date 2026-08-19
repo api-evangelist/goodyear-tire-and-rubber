@@ -1,0 +1,173 @@
+{
+  "item": [
+    {
+      "id": "66a4c762-721f-4fa2-a2b2-de6f79e90385",
+      "name": "Friction",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8897f3db-102d-466c-ac30-bf1be7a151bd",
+          "name": "Get Friction Data",
+          "request": {
+            "name": "Get Friction Data",
+            "description": {
+              "content": "Retrieve tire friction data combined with real-time weather conditions for road safety assessment.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "friction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "vehicleId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "latitude",
+                  "value": "<number>"
+                },
+                {
+                  "disabled": false,
+                  "key": "longitude",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a164994e-a94a-4fcc-bb81-806cf4403e89",
+              "name": "Successful response with friction data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "friction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "vehicleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "latitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"frictionCoefficient\": 9048.384813713918,\n  \"roadCondition\": \"string\",\n  \"weatherCondition\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c2cedf5a-709c-4e2f-95d1-b5b24b45d81b",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "friction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "vehicleId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "latitude",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "longitude",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gaas-portal.goodyear.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f659da4b-8028-4940-bd9e-9b3fc5757009",
+    "name": "Goodyear API Management Portal (GaaS) Catalog Friction API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}

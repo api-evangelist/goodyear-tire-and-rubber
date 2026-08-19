@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "0bbbd0e2-31a4-44ba-b62c-63966c71fb74",
+      "name": "Tires",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d7abfbcc-9841-4184-b46d-b7c0a96744d6",
+          "name": "Get Tire Data",
+          "request": {
+            "name": "Get Tire Data",
+            "description": {
+              "content": "Retrieve intelligent tire sensor data including pressure, temperature, and wear state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tires"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "vehicleId",
+                  "value": "<string>",
+                  "description": "The vehicle identifier to retrieve tire data for."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c6d0505b-ca3e-4b43-b8c5-356a5205906b",
+              "name": "Successful response with tire data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tires"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "vehicleId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"vehicleId\": \"string\",\n  \"tires\": [\n    {\n      \"position\": \"string\",\n      \"tireType\": \"string\",\n      \"treadDepthMm\": 5252.836500813179,\n      \"pressurePsi\": 4102.372002333038,\n      \"temperatureC\": 2549.503795663548,\n      \"loadKg\": 2962.157427279869,\n      \"wearState\": \"fair\"\n    },\n    {\n      \"position\": \"string\",\n      \"tireType\": \"string\",\n      \"treadDepthMm\": 634.3133153652891,\n      \"pressurePsi\": 2834.3282302117814,\n      \"temperatureC\": 4686.607473544705,\n      \"loadKg\": 1561.5244130112849,\n      \"wearState\": \"good\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "65d40a7e-4999-45a8-82a5-2d3c7f605f78",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tires"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "vehicleId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gaas-portal.goodyear.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d58dddae-e184-4da7-bf2f-8b0d73ceb355",
+    "name": "Goodyear API Management Portal (GaaS) Catalog Tires API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}

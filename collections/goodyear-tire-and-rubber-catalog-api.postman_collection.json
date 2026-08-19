@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "541f2d3b-d3f3-480c-b805-4eebcdc4f1b1",
+      "name": "Catalog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ce29358-c517-40d1-9b47-62494b4d6192",
+          "name": "Get Tire Catalog",
+          "request": {
+            "name": "Get Tire Catalog",
+            "description": {
+              "content": "Retrieve Goodyear commercial truck tire catalog data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "catalog"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d06a161f-e166-446f-83ed-9a681df6c3fb",
+              "name": "Successful response with tire catalog.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "catalog"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"tires\": [\n    {\n      \"sku\": \"string\",\n      \"name\": \"string\",\n      \"size\": \"string\",\n      \"category\": \"string\"\n    },\n    {\n      \"sku\": \"string\",\n      \"name\": \"string\",\n      \"size\": \"string\",\n      \"category\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "35971114-775f-41f1-b186-2f2bd2d7730e",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "catalog"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://gaas-portal.goodyear.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "47a12f17-b923-47ff-a22c-625aea3b5bd5",
+    "name": "Goodyear API Management Portal (GaaS) Catalog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.\n\nContact Support:\n Name: Goodyear",
+      "type": "text/plain"
+    }
+  }
+}

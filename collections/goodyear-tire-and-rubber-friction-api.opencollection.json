@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodyear API Management Portal (GaaS) Catalog Friction API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Friction",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Friction Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://gaas-portal.goodyear.com/friction",
+            "params": [
+              {
+                "name": "vehicleId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve tire friction data combined with real-time weather conditions for road safety assessment."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
