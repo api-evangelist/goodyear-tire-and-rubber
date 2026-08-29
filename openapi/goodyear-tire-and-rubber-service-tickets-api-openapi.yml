@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Goodyear API Management Portal (GaaS) Catalog Service Tickets API
+  title: Goodyear API Management Portal (GaaS) Service Tickets API
   description: The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.
   version: 1.0.0
   contact:

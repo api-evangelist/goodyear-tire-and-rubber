@@ -1,14 +1,14 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Goodyear API Management Portal (GaaS) Catalog Tires API
-  description: The Goodyear API Management Portal provides access to Goodyear's suite of APIs for tire and fleet management services including catalog, work order, and service ticket management.
+  title: Goodyear SightLine Tires API
+  description: Goodyear SightLine API provides developer-friendly access to intelligent tire data including tire type, tread depth, tire pressure, load, wear state, and temperature. Uses REST architecture with robust security protocols for efficient and secure data sharing.
   version: 1.0.0
   contact:
     name: Goodyear
-    url: https://gaas-portal.goodyear.com/
+    url: https://developer.goodyearsightline.com/
 servers:
-- url: https://gaas-portal.goodyear.com
-  description: Goodyear API Management Portal
+- url: https://developer.goodyearsightline.com
+  description: Goodyear SightLine Developer Portal
 tags:
 - name: Tires
 paths:

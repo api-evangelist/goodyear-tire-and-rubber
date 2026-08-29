@@ -1,22 +1,41 @@
 {
   "provider": "goodyear-tire-and-rubber",
   "sources": [
-    "goodyear-tire-and-rubber-catalog-api-openapi.yml",
-    "goodyear-tire-and-rubber-friction-api-openapi.yml",
-    "goodyear-tire-and-rubber-service-tickets-api-openapi.yml",
-    "goodyear-tire-and-rubber-tires-api-openapi.yml",
-    "goodyear-tire-and-rubber-work-orders-api-openapi.yml"
+    "_original/gaas-portal.yml",
+    "_original/sightline-api.yml"
   ],
   "outputs": [
     "goodyear-tire-and-rubber-catalog-api-openapi.yml",
-    "goodyear-tire-and-rubber-friction-api-openapi.yml",
     "goodyear-tire-and-rubber-service-tickets-api-openapi.yml",
-    "goodyear-tire-and-rubber-tires-api-openapi.yml",
-    "goodyear-tire-and-rubber-work-orders-api-openapi.yml"
+    "goodyear-tire-and-rubber-work-orders-api-openapi.yml",
+    "goodyear-tire-and-rubber-friction-api-openapi.yml",
+    "goodyear-tire-and-rubber-tires-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "gaas-portal.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "gaas-portal.yml: tagged paths GET /catalog -> Catalog",
+    "gaas-portal.yml: tagged paths GET /work-orders -> Work Orders",
+    "gaas-portal.yml: tagged paths POST /work-orders -> Work Orders",
+    "gaas-portal.yml: tagged paths GET /service-tickets -> Service Tickets",
+    "gaas-portal.yml: tagged paths POST /service-tickets -> Service Tickets",
+    "gaas-portal.yml: declared missing tag: Catalog",
+    "gaas-portal.yml: declared missing tag: Service Tickets",
+    "gaas-portal.yml: declared missing tag: Work Orders",
+    "sightline-api.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sightline-api.yml: tagged paths GET /tires -> Tires",
+    "sightline-api.yml: tagged paths GET /friction -> Friction",
+    "sightline-api.yml: declared missing tag: Friction",
+    "sightline-api.yml: declared missing tag: Tires"
+  ],
+  "skipped": [
+    "goodyear-tire-and-rubber-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodyear-tire-and-rubber-friction-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodyear-tire-and-rubber-service-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodyear-tire-and-rubber-tires-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodyear-tire-and-rubber-work-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
