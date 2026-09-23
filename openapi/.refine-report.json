@@ -29,7 +29,8 @@
     "sightline-api.yml: tagged paths GET /tires -> Tires",
     "sightline-api.yml: tagged paths GET /friction -> Friction",
     "sightline-api.yml: declared missing tag: Friction",
-    "sightline-api.yml: declared missing tag: Tires"
+    "sightline-api.yml: declared missing tag: Tires",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "goodyear-tire-and-rubber-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",

@@ -1,7 +1,9 @@
 ---
 title: Goodyear And SafeAI Announce Tire Intelligence For ...
 url: https://news.goodyear.com/goodyear_and_safeai_
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Goodyear Tire & Rubber" press release artificial intelligence'
 position: 1
 source: serpapi-google
