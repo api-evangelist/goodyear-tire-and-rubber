@@ -1,5 +1,9 @@
 aid: goodyear-tire-and-rubber
 url: https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
+x-docs-hosting: aws-cloudfront
 apis:
 - aid: goodyear-tire-and-rubber:catalog-api
   name: Goodyear Truck Tire Catalog API
