@@ -165,6 +165,12 @@ tags:
   - Telematics
   - Tires
 common:
+  - type: Plans
+    url: plans/goodyear-tire-and-rubber-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/goodyear-tire-and-rubber-rate-limits.yml
+  - type: FinOps
+    url: finops/goodyear-tire-and-rubber-finops.yml
   - type: AgenticAccess
     url: agentic-access/goodyear-tire-and-rubber-agentic-access.yml
   - type: DomainSecurity
