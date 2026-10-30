@@ -1,4 +1,4 @@
-# Goodyear Tire & Rubber (goodyear-tire-and-rubber)
+# Goodyear Tire & Rubber
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,142 +66,134 @@
 
 The Goodyear Tire & Rubber Company is a global tire manufacturer that provides developer APIs for intelligent tire data, fleet management, and commercial truck tire services. Goodyear's SightLine technology and GaaS API platform enable programmatic access to tire telematics, catalogs, work orders, and service tickets.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/goodyear-tire-and-rubber/refs/heads/main/apis.yml)
+**Areas:** Connected Vehicles · Fleet Management · IoT · Telematics · Tires
 
-## Scope
+## Goodyear Tire & Rubber on APIs.io
 
-- **Type:** Index
+Everything profiled for Goodyear Tire & Rubber is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/goodyear-tire-and-rubber/](https://apis.io/providers/goodyear-tire-and-rubber/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Connected Vehicles
-- Fleet Management
-- IoT
-- Telematics
-- Tires
+- [Goodyear Truck Tire Catalog API](https://apis.io/apis/goodyear-tire-and-rubber/catalog-api/) — The Goodyear Truck Tire Catalog API provides access to Goodyear's commercial truck tire catalog data.
+- [Goodyear Work Order API](https://apis.io/apis/goodyear-tire-and-rubber/work-order-api/) — The Goodyear Work Order API enables management of service work orders for commercial truck tire services.
+- [Goodyear Service Ticket API](https://apis.io/apis/goodyear-tire-and-rubber/service-ticket-api/) — The Goodyear Service Ticket API provides management of service tickets for commercial truck tire services.
+- [Goodyear Tire & Rubber Catalog API](https://apis.io/apis/goodyear-tire-and-rubber/goodyear-tire-and-rubber-catalog-api/) — The Catalog API from Goodyear Tire & Rubber — 1 operation(s) for catalog.
+- [Goodyear Tire & Rubber Friction API](https://apis.io/apis/goodyear-tire-and-rubber/goodyear-tire-and-rubber-friction-api/) — The Friction API from Goodyear Tire & Rubber — 1 operation(s) for friction.
+- [Goodyear Tire & Rubber Service Tickets API](https://apis.io/apis/goodyear-tire-and-rubber/goodyear-tire-and-rubber-service-tickets-api/) — The Service Tickets API from Goodyear Tire & Rubber — 1 operation(s) for service tickets.
+- [Goodyear Tire & Rubber Tires API](https://apis.io/apis/goodyear-tire-and-rubber/goodyear-tire-and-rubber-tires-api/) — The Tires API from Goodyear Tire & Rubber — 1 operation(s) for tires.
+- [Goodyear Tire & Rubber Work Orders API](https://apis.io/apis/goodyear-tire-and-rubber/goodyear-tire-and-rubber-work-orders-api/) — The Work Orders API from Goodyear Tire & Rubber — 1 operation(s) for work orders.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Goodyear SightLine API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Goodyear SightLine API provides developer-friendly access to intelligent tire data including tire type, tread depth, tire pressure, load, wear state, and temperature. The API uses REST architecture with robust security protocols for efficient and secure data sharing.
+- [Goodyear Tire And Rubber Agentic Access](https://apis.io/agentic-access/goodyear-tire-and-rubber/goodyear-tire-and-rubber-agentic-access/)
 
-- **Human URL:** [https://developer.goodyearsightline.com/](https://developer.goodyearsightline.com/)
-- **Base URL:** `https://developer.goodyearsightline.com`
+#### JSON Structure (1)
 
-#### Tags
+Data models expressed in JSON Structure.
 
-- Connected Vehicles
-- IoT
-- Telematics
-- Tire Data
-- Tires
+- [Goodyear Tire And Rubber Structure](https://apis.io/json-structure/goodyear-tire-and-rubber/goodyear-tire-and-rubber-structure/)
 
-#### Properties
+#### Collections (7)
 
-- [Portal](https://developer.goodyearsightline.com/)
-- [OpenAPI](openapi/sightline-api.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/sightline-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/sightline-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Goodyear API Management Portal
+- [Goodyear API Management Portal (GaaS)](https://apis.io/collections/goodyear-tire-and-rubber/open-gaas-portal/)
+- [Goodyear API Management Portal (GaaS) Catalog API](https://apis.io/collections/goodyear-tire-and-rubber/open-goodyear-tire-and-rubber-catalog-api/)
+- [Goodyear API Management Portal (GaaS) Catalog Friction API](https://apis.io/collections/goodyear-tire-and-rubber/open-goodyear-tire-and-rubber-friction-api/)
+- [Goodyear API Management Portal (GaaS) Catalog Service Tickets API](https://apis.io/collections/goodyear-tire-and-rubber/open-goodyear-tire-and-rubber-service-tickets-api/)
+- [Goodyear API Management Portal (GaaS) Catalog Tires API](https://apis.io/collections/goodyear-tire-and-rubber/open-goodyear-tire-and-rubber-tires-api/)
+- [Goodyear API Management Portal (GaaS) Catalog Work Orders API](https://apis.io/collections/goodyear-tire-and-rubber/open-goodyear-tire-and-rubber-work-orders-api/)
+- [Goodyear SightLine API](https://apis.io/collections/goodyear-tire-and-rubber/open-sightline-api/)
 
-The Goodyear API Management Portal (GaaS) provides access to Goodyear's suite of APIs for tire and fleet management services.
+#### Security (1)
 
-- **Human URL:** [https://gaas-portal.goodyear.com/](https://gaas-portal.goodyear.com/)
-- **Base URL:** `https://gaas-portal.goodyear.com`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Goodyear Tire And Rubber Domain Security](https://apis.io/security/goodyear-tire-and-rubber/goodyear-tire-and-rubber-domain-security/)
 
-- API Management
-- Fleet Management
-- Tires
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Portal](https://gaas-portal.goodyear.com/)
-- [Sign Up](https://gaas-portal.goodyear.com/signup)
-- [OpenAPI](openapi/gaas-portal.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gaas-portal.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gaas-portal.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Goodyear Tire And Rubber Plans Pricing](https://apis.io/plans/goodyear-tire-and-rubber/goodyear-tire-and-rubber-plans-pricing/)
 
-### Goodyear Truck Tire Catalog API
+#### Rate limits (1)
 
-The Goodyear Truck Tire Catalog API provides access to Goodyear's commercial truck tire catalog data.
+Published request limits.
 
-- **Human URL:** [https://api.catalog.goodyeartrucktires.com/](https://api.catalog.goodyeartrucktires.com/)
-- **Base URL:** `https://api.catalog.goodyeartrucktires.com`
+- [Goodyear Tire And Rubber Rate Limits](https://apis.io/rate-limits/goodyear-tire-and-rubber/goodyear-tire-and-rubber-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Catalog
-- Tires
-- Truck Tires
+What the API costs to run, by operation.
 
-#### Properties
+- [Goodyear Tire And Rubber Finops](https://apis.io/finops/goodyear-tire-and-rubber/goodyear-tire-and-rubber-finops/)
 
-- [Portal](https://api.catalog.goodyeartrucktires.com/)
-- [Postman Collection](collections/gaas-portal.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gaas-portal.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/sightline-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/sightline-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Goodyear Work Order API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-The Goodyear Work Order API enables management of service work orders for commercial truck tire services.
-
-- **Human URL:** [https://api.workorder.goodyeartrucktires.com/](https://api.workorder.goodyeartrucktires.com/)
-- **Base URL:** `https://api.workorder.goodyeartrucktires.com`
-
-#### Tags
-
-- Fleet Management
-- Tires
-- Work Orders
-
-#### Properties
-
-- [Portal](https://api.workorder.goodyeartrucktires.com/)
-- [Postman Collection](collections/gaas-portal.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gaas-portal.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/sightline-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/sightline-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Goodyear Service Ticket API
-
-The Goodyear Service Ticket API provides management of service tickets for commercial truck tire services.
-
-- **Human URL:** [https://api.serviceticket.goodyeartrucktires.com/](https://api.serviceticket.goodyeartrucktires.com/)
-- **Base URL:** `https://api.serviceticket.goodyeartrucktires.com`
-
-#### Tags
-
-- Fleet Management
-- Service Tickets
-- Tires
-
-#### Properties
-
-- [Portal](https://api.serviceticket.goodyeartrucktires.com/)
-- [Postman Collection](collections/gaas-portal.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gaas-portal.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/sightline-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/sightline-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/goodyear)
-- [LinkedIn](https://www.linkedin.com/company/goodyear)
 - [Website](https://www.goodyear.com)
-- [Portal](https://developer.goodyearsightline.com/)
-- [Portal](https://gaas-portal.goodyear.com/)
+- [Blog](https://news.goodyear.com/news?pagetemplate=rss)
+- [GitHub](https://github.com/goodyear)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.9** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 17.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/goodyear-tire-and-rubber/](https://apis.io/providers/goodyear-tire-and-rubber/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Goodyear Tire & Rubber: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/goodyear-tire-and-rubber/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
